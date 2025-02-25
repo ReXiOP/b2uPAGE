@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bijoy to Unicode Converter is a Python-based tool designed to convert Bijoy-encoded text into Unicode format easily. Supports .docx files and batch processing for efficiency.">
+    <meta name="keywords"
+        content="Bijoy Encoding, Unicode Conversion, Bijoy to Unicode, Python Converter, Batch Conversion, Text Encoding, .docx Conversion, GitHub Python Project,Muhammad,SaJid,sajid">
+    <meta name="author" content="Muhammad SaJid">
+    <meta property="og:title" content="Bijoy to Unicode Converter">
+    <meta property="og:description"
+        content="A Python-based tool for converting Bijoy-encoded text to Unicode format, supporting .docx files and batch processing.">
+    <meta property="og:image" content="images/b2u.png">
+    <meta property="og:url" content="https://github.com/ReXiOP/Bijoy-To-Unicode-Converter">
+    <meta name="twitter:card" content="images/b2u.png">
+    <meta name="twitter:title" content="Bijoy to Unicode Converter">
+    <meta name="twitter:description"
+        content="Convert Bijoy-encoded text into Unicode format with this easy-to-use Python tool for .docx files.">
+    <meta name="twitter:image" content="images/b2u.png">
+    <title>Bijoy to Unicode Converter </title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI -->
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.0.4/dist/full.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #F3F4F6;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #1D4ED8;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated-btn {
+            transition: all 0.3s ease;
+        }
+
+        .animated-btn:hover {
+            transform: scale(1.1);
+            background-color: #1D4ED8;
+            color: #fff;
+        }
+
+        .custom-card {
+            background: linear-gradient(to bottom right, #4C6B87, #1D4ED8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(45deg, #1D4ED8, #4C6B87);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .text-gradient {
+            background: -webkit-linear-gradient(to right, #6a11cb, #2575fc);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        .card-transition {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card-transition:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            background-color: #4C6B87;
+            color: #fff;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #1D4ED8;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .progress-bar-custom {
+            background-color: #4C6B87;
+            animation: progressAnimation 2s infinite;
+        }
+
+        @keyframes progressAnimation {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 50%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .text-lg {
+                font-size: 1rem;
+            }
+
+            .btn-custom {
+                padding: 10px 20px;
+            }
+
+            .animated-btn {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl font-extrabold mb-4">Bijoy to Unicode Converter</h1>
+            <p class="text-xl">Convert Bijoy-encoded text to Unicode format with this Python tool. Supports batch
+                processing for .docx files.</p>
+            <a href="#features" class="btn btn-outline btn-light mt-6 text-lg px-8 py-3 rounded-md animated-btn">Learn
+                More</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto py-16 px-6 md:px-12">
+        <h2 class="section-title text-3xl text-center text-blue-700 mb-12">Features</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="custom-card text-white text-center p-6">
+                <h3 class="text-2xl font-semibold mb-4">Easy Conversion</h3>
+                <p>Convert Bijoy-encoded text from .docx files to Unicode format seamlessly.</p>
+            </div>
+            <div class="custom-card text-white text-center p-6">
+                <h3 class="text-2xl font-semibold mb-4">Batch Processing</h3>
+                <p>Supports converting multiple files at once to save time and effort.</p>
+            </div>
+            <div class="custom-card text-white text-center p-6">
+                <h3 class="text-2xl font-semibold mb-4">Progress Bar</h3>
+                <p>Get real-time feedback with an animated and colorful progress bar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Project Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="section-title text-3xl text-center text-blue-700 mb-8">About the Project</h2>
+            <p class="text-lg text-gray-700 text-center mb-4">
+                **Bijoy to Unicode Converter** is a Python-based tool designed to convert text written in **Bijoy
+                encoding** into **Unicode** format. This tool is particularly useful for those who deal with legacy text
+                encoded using the Bijoy method, which is widely used in Bangladesh for typing Bengali text.
+            </p>
+            <p class="text-lg text-gray-700 text-center mb-4">
+                The tool is simple to use and does not require any complex setup. By just placing the files in the
+                specified folder, users can easily convert multiple Bijoy-encoded `.docx` files into Unicode. This
+                eliminates the need for manual conversion, saving time and improving productivity, especially when
+                handling large batches of files.
+            </p>
+            <p class="text-lg text-gray-700 text-center mb-8">
+                The tool supports batch processing, which means you can convert multiple files in one go. It also
+                features a real-time progress bar, providing feedback during the conversion process, so users know
+                exactly where they are in the process.
+            </p>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Technologies Used</h3>
+            <ul class="list-disc text-lg text-gray-700 ml-6 space-y-2">
+                <li><strong>Python</strong>: The core language used to implement the conversion logic.</li>
+                <li><strong>docx module</strong>: Used to handle the reading and writing of .docx files.</li>
+                <li><strong>Bijoy Encoding Scheme</strong>: The encoding method that this tool works to convert into
+                    Unicode format.</li>
+                <li><strong>Unicode Encoding</strong>: The universal character encoding standard that the tool outputs
+                    text in.</li>
+            </ul>
+            <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Why This Project?</h3>
+            <p class="text-lg text-gray-700 mb-4">
+                In Bangladesh, the Bijoy encoding system has been historically popular for typing Bengali text. However,
+                due to the global adoption of Unicode for text encoding, it’s often necessary to convert Bijoy-encoded
+                files into Unicode. Manually performing this conversion can be time-consuming and error-prone, which is
+                where this tool comes in. By automating the process, users can save time and ensure accuracy.
+            </p>
+            <p class="text-lg text-gray-700 mb-8">
+                This tool is designed to be user-friendly and efficient, making it suitable for anyone needing to
+                convert Bijoy-encoded documents—whether you're working with a single file or need to convert multiple
+                files in bulk. It’s ideal for writers, researchers, educators, and developers working with Bengali text.
+            </p>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Potential Use Cases</h3>
+            <ul class="list-disc text-lg text-gray-700 ml-6 space-y-2">
+                <li><strong>Writers and Editors</strong>: Easily convert legacy documents written in Bijoy encoding to
+                    Unicode for modern usage.</li>
+                <li><strong>Researchers</strong>: Convert old research papers or datasets that were written in Bijoy
+                    into a universally accessible format.</li>
+                <li><strong>Educators</strong>: Use this tool to convert old textbooks or articles into Unicode format
+                    for digital learning platforms.</li>
+                <li><strong>Software Developers</strong>: Developers working on Bengali text applications can use this
+                    tool to ensure compatibility with Unicode standards.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- How to Use Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="section-title text-3xl text-center text-blue-700 mb-8">How to Use</h2>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-x-16 sm:space-y-0">
+                <div class="text-center sm:text-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Step 1: Prepare Your Files</h3>
+                    <ul class="list-disc text-gray-700 text-lg space-y-2">
+                        <li>Put your .docx files with Bijoy-encoded text into a folder (e.g., <strong>bijoy</strong>).
+                        </li>
+                        <li>Create a folder for converted files (e.g., <strong>unicode</strong>).</li>
+                    </ul>
+                </div>
+                <div class="text-center sm:text-left">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Step 2: Run the Script</h3>
+                    <pre class="bg-gray-200 p-4 rounded-md font-mono text-gray-700">python app.py</pre>
+                    <p class="text-lg text-gray-700 mt-4">This will convert all your files from the
+                        <strong>bijoy</strong> folder into Unicode and save them in the <strong>unicode</strong> folder.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="section-title text-3xl text-center text-blue-700 mb-8">Example</h2>
+            <p class="text-lg text-gray-700 text-center mb-8">Here’s an example of the directories and files before and
+                after conversion:</p>
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Input Directory: <code
+                        class="font-mono text-gray-600">bijoy</code></h3>
+                <ul class="list-disc text-gray-700 text-lg space-y-2 mb-8">
+                    <li>file1.docx</li>
+                    <li>file2.docx</li>
+                </ul>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Output Directory: <code
+                        class="font-mono text-gray-600">unicode</code></h3>
+                <ul class="list-disc text-gray-700 text-lg space-y-2">
+                    <li>file1.docx (converted)</li>
+                    <li>file2.docx (converted)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Link Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Get Involved</h2>
+            <p class="text-xl mb-8">Check out the project on GitHub and contribute!</p>
+            <a href="https://github.com/ReXiOP/Bijoy-To-Unicode-Converter"
+                class="btn btn-outline btn-light animated-btn text-lg px-8 py-3 rounded-md">Visit GitHub Repository</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>Created by <strong>Muhammad SaJid</strong> | <a href="https://github.com/ReXiOP"
+                    class="text-blue-400">GitHub</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
